@@ -1,4 +1,4 @@
-## django-debug-toolbar not showing when using with Docker
+## Django Debug Toolbar not showing when using with Docker
 (With a Django app inside a Docker container)
 
 ### Preface
