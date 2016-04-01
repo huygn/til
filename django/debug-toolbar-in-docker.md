@@ -1,9 +1,9 @@
-## Django Debug Toolbar not showing when using with Docker
-(Django inside a container)
+## django-debug-toolbar not showing when using with Docker
+(With a Django app inside a Docker container)
 
 ### Preface
 Django Debug Toolbar comes with `INTERNAL_IPS` settings variable (can be a list of strings) to specify
-which IP addresses are allowed to access the Debug Toolbar. The debug toolbar's middleware get the IP address from
+which IP addresses are allowed to access the debug toolbar. The debug toolbar's middleware get the IP address from
 `request.META['REMOTE_ADDR']` and then check if `INTERNAL_IPS` contains that IP, if `True`, the toolbar shows up.
 
 One thing to note, if `settings.DEBUG = False`, the debug toolbar is totally disabled regardless.
