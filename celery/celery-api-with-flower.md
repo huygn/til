@@ -17,6 +17,7 @@ You can also do lots of Celery things with Celery Flower [API](https://github.co
 - call a task
 - terminate executing task
 - receive task completion events in real-time via WebSocket
+- and [more](http://flower.readthedocs.org/en/latest/api.html)
 
 Flower Web GUI shows tasks (active, finished, reserved, etc) in real time. It enables to filter tasks by time, workers and types.
 Flower needs to be installed and running of course.
