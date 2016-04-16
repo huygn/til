@@ -21,7 +21,7 @@ Ideally, Consul client should run on each *physical* node in a (swarm) cluster a
 with other Consul servers/clients to form a cluster. For more info, see https://www.consul.io/intro/getting-started/join.html.
 
 ### Pairing with Registrator
-Registrator watches for new Docker containers and inspects them to determine what services they provide,
+[Registrator](http://gliderlabs.com/registrator/latest/) watches for new Docker containers and inspects them to determine what services they provide,
 it performs bridging between the Docker event hub and the Consul agent.
 For every newly-started container/service, Registrator will add them to Consul KV store, and when any containter/service
 got stopped/removed, Registrator will remove them from Consul KV store eaccordingly.
