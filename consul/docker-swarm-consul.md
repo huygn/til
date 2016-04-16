@@ -1,4 +1,4 @@
-## Things to note when working with Docker
+## Things to note when using Consul with Docker Swarm
 
 ### Agent modes
 The Consul agent is [the core process of Consul](https://www.consul.io/docs/agent/basics.html).
