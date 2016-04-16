@@ -30,4 +30,4 @@ got stopped/removed, Registrator will remove them from Consul KV store eaccordin
 - Registrator is designed to be [run once on every host](http://gliderlabs.com/registrator/latest/user/run/).
 - Run Registrator in a container and point it to Consul KV store.
 - Consul might as well run inside a container.
-- With Docker Swarm use Consul as its Service Backend, Swarm will store its nodes in Consul KV store.
+- If specified Consul as Swarm's discovery backend, Swarm will store its nodes in Consul KV store.
