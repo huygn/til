@@ -12,12 +12,12 @@ Consul have its own cluster architecture with server and client modes (like mast
 - Key-Value store
 - Health check
 - Services registration/deregistration
-  - Automatically: using Registrator (see [below](#pairing-with-registrator))
-  - Manually: via `json` config files or Consul APIs
+  - Automatically: using Registrator, see [below](#pairing-with-registrator)
+  - Manually: via `json` config files or Consul APIs, see [Consul docs](https://www.consul.io/intro/getting-started/services.html)
 - Support for multiple Datacenters (each Datacenter have its own set of Consul servers,
-these servers act as gateways to other Datacenters and forward traffic as appropriate.)
+these servers act as gateways to other Datacenters and forward traffic as appropriate)
 
-Ideally, Consul client should runs on each *physical* node in a (swarm) cluster and [`join`](https://www.consul.io/docs/agent/options.html#_join)
+Ideally, Consul client should run on each *physical* node in a (swarm) cluster and [`join`](https://www.consul.io/docs/agent/options.html#_join)
 with other Consul servers/clients to form a cluster. For more info, see https://www.consul.io/intro/getting-started/join.html.
 
 ### Pairing with Registrator
@@ -31,3 +31,6 @@ got stopped/removed, Registrator will remove them from Consul KV store eaccordin
 - Run Registrator in a container and point it to Consul KV store.
 - Consul might as well run inside a container.
 - If specified Consul as Swarm's discovery backend, Swarm will store its nodes in Consul KV store.
+
+### Misconcepts
+- Consul nodes (`curl localhost:8500/v1/catalog/nodes`) does not have anything to do with Swarm nodes. Swarm nodes are stored in Consul KV store at [`localhost:8500/v1/kv/<key>`](https://www.consul.io/docs/agent/http/kv.html).
