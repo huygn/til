@@ -33,4 +33,4 @@ got stopped/removed, Registrator will remove them from Consul KV store eaccordin
 - If specified Consul as Swarm's discovery backend, Swarm will store its nodes in Consul KV store.
 
 ### Misconcepts
-- Consul nodes (`curl localhost:8500/v1/catalog/nodes`) does not have anything to do with Swarm nodes. Swarm nodes are stored in Consul KV store at [`localhost:8500/v1/kv/<key>`](https://www.consul.io/docs/agent/http/kv.html).
+- Consul nodes (`localhost:8500/v1/catalog/nodes`) does not have anything to do with Swarm nodes. Swarm nodes are stored in Consul KV store at [`localhost:8500/v1/kv/<key>`](https://www.consul.io/docs/agent/http/kv.html).
