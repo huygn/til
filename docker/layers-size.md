@@ -52,7 +52,7 @@ $ docker ps -s -l
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                     PORTS               NAMES               SIZE
 03449a8fc4fd        gnhuy91/test-size   "/bin/bash"         6 seconds ago       Exited (0) 5 seconds ago                       determined_jepsen   0 B (virtual 272.4 MB)
 ```
-Check the SIZE column, `virtual 272.4 MB`, this is equal to all layers size sumed up.
+Check the SIZE column, `virtual 272.4 MB`, this is equal to the total of all layers.
 
 ### Conclusion
 - Copying files to container increase the container size by exactly the files size.
