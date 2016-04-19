@@ -20,15 +20,19 @@ COPY skype-ubuntu-precise_4.3.0.37-1_i386.deb firefox-mozilla-build_42.0-0ubuntu
 RUN rm -f /tmp/skype-ubuntu-precise_4.3.0.37-1_i386.deb
 ```
 
-#### Build and push it to Hub
-Optional - to inspect with [ImageLayers.io](https://imagelayers.io/)
+#### Build the container
 ```
 $ docker build -t gnhuy91/test-size .
 $ docker push gnhuy91/test-size:latest
 ```
+`push` is optional - to inspect with [ImageLayers.io](https://imagelayers.io/).
 
 
 ### How to check the size
+#### Run the container
+```
+$ docker run -d gnhuy91/test-size
+```
 #### Layers size
 ```
 $ docker history -H gnhuy91/test-size
@@ -44,7 +48,6 @@ IMAGE               CREATED             CREATED BY                              
 ```
 #### Total size
 ```
-$ docker run gnhuy91/test-size
 $ docker ps -s -l
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                     PORTS               NAMES               SIZE
 03449a8fc4fd        gnhuy91/test-size   "/bin/bash"         6 seconds ago       Exited (0) 5 seconds ago                       determined_jepsen   0 B (virtual 272.4 MB)
