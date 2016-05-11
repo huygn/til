@@ -42,3 +42,7 @@ docker run -d -p 9100:9100 --net=host --name=node-exporter \
   -collector.sysfs /host/proc \
   -collector.filesystem.ignored-mount-points "^/(sys|proc|dev|host|etc)($|/)"
 ```
+
+### References
+- https://github.com/influxdata/telegraf/blob/master/plugins/inputs/system/DISK_README.md#configuration
+- https://www.digitalocean.com/community/tutorials/how-to-install-prometheus-using-docker-on-ubuntu-14-04
