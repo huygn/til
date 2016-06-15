@@ -1,10 +1,9 @@
-## Metrics Collector as a Container
+## Metrics Collector as Containers
 Thinks [Collectd](https://github.com/collectd/collectd), [Telegraf](https://github.com/influxdata/telegraf), Prometheus [node exporter](https://github.com/prometheus/node_exporter).
 
 ### Why
 Normally these collectors will run as agents on a host machine, collect that machine's resource metrics such as cpu, mem, disk usage.
-If deployed by normal binary files on every nodes, they work fine but you will loose service discovery features that Consul and Registrator
-offer.
+Deploying normal binaries on every nodes work just fine, however it is easier to deploy and update a docker image if you're already running a docker cluster.
 
 So, at some point we want to dockerize these collectors and deploy them to the Swarm cluster, it also make them easier to update.
 
