@@ -5,8 +5,6 @@ Thinks [Collectd](https://github.com/collectd/collectd), [Telegraf](https://gith
 Normally these collectors will run as agents on a host machine, collect that machine's resource metrics such as cpu, mem, disk usage.
 Deploying normal binaries on every nodes work just fine, however it is easier to deploy and update a docker image if you're already running a docker cluster.
 
-So, at some point we want to dockerize these collectors and deploy them to the Swarm cluster, it also make them easier to update.
-
 ### The problem
 Resource collectors are made to collect resource metrics on the current host they are deployed on, when dockerized,
 obviously they will collect metrics from their *container* (which is totally different from the current physical host machine).
